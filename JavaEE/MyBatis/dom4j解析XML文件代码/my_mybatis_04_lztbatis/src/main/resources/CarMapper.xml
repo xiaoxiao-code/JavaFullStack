@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="com.lzt.mapper.CarMapper">
+
+    <select id="selectCarById" resultType="com.lzt.pojo.Car">
+        select id, car_num, brand, guide_price, produce_time, car_type
+        from t_car
+        where id = #{id}
+    </select>
+
+    <insert id="insertCar">
+        insert into t_car(id, car_num, brand, guide_price, produce_time, car_type)
+        values (#{id}, #{carNum}, #{brand}, #{guidePrice}, #{produceTime}, #{carType})
+    </insert>
+
+</mapper>
+
+
