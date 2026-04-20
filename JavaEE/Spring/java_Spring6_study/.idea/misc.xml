@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring6-ioc-oa-demo01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-first-demo02/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-dependency-injection-demo03/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-factory-pattern-dao-demo04/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-bean-instantiation-demo05/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-bean-lifecycle-demo06/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-Circular-Dependency-Demo07/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-ReflectionPractice-Demo08/pom.xml" />
+        <option value="$PROJECT_DIR$/myspring/pom.xml" />
+        <option value="$PROJECT_DIR$/myspring-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-ioc-annotation-demo09/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-jbdc-demo10/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-gof-proxy-pattern-demo11/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-aop-demo12/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-tx-bank-demo13/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-junit5-demo14/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-mybatis3.5-demo15/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

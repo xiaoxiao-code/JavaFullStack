@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.cqipu.edu</groupId>
+    <artifactId>spring6-dependency-injection-demo03</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- JDK21+编码+Spring版本统一管理 -->
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>6.0.10</spring.version> <!-- 选取合适的spring 版本 -->
+        <junit.version>4.13.2</junit.version> <!-- 选取合适的junit 版本 -->
+        <log4j2.version>2.20.0</log4j2.version> <!-- 选取合适的 Log4j2 版本 -->
+    </properties>
+
+    <dependencies>
+        <!-- Spring6核心依赖（仅需spring-context，自动拉取core/beans等） -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version> <!-- 用属性统一管理，易维护 -->
+        </dependency>
+
+        <!-- JUnit 4.13.2 测试依赖 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope> <!-- 仅测试阶段生效，主代码不依赖 -->
+        </dependency>
+
+        <!-- 添加dom4j依赖 -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>2.1.4</version>
+        </dependency>
+
+        <!-- Log4j2 核心依赖 -->
+        <!-- Log4j2 API（日志接口） -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <!-- Log4j2 核心实现（日志功能） -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <!-- Log4j2 适配SLF4J -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 指定编译插件版本（适配JDK21，避免版本兼容报错） -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version> <!-- 支持JDK21的最低版本 -->
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

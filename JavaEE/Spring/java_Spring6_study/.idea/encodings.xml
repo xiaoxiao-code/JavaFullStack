@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/spring6-Circular-Dependency-Demo07/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-Circular-Dependency-Demo07/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-ReflectionPractice-Demo08/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-ReflectionPractice-Demo08/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-bean-instantiation-demo05/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-bean-instantiation-demo05/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-bean-lifecycle-demo06/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-bean-lifecycle-demo06/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-dependency-injection-demo03/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-dependency-injection-demo03/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-factory-pattern-dao-demo04/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-factory-pattern-dao-demo04/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-first-demo02/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-first-demo02/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-ioc-oa-demo01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-ioc-oa-demo01/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

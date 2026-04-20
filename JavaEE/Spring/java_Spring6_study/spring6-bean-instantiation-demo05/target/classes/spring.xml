@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userBean" class="org.cqipu.edu.bean.User"/>
+    <bean id="vipBean" class="org.cqipu.edu.bean.VipFactory" factory-method="get"/>
+    <bean id="orderFactory" class="org.cqipu.edu.bean.OrderFactory"/>
+    <bean id="orderBean" factory-bean="orderFactory" factory-method="get"/>
+    <bean id="personBean" class="org.cqipu.edu.bean.PersonFactoryBean"/>
+
+<!--    <bean id="studentBean" class="org.cqipu.edu.bean.Student">-->
+<!--        <property name="birth" value="2002-10-10"/>-->
+<!--    </bean>-->
+
+    <bean id="dateBean" class="org.cqipu.edu.bean.DateFactoryBean">
+        <constructor-arg name="date" value="1999-10-11"/>
+    </bean>
+
+    <bean id="studentBean" class="org.cqipu.edu.bean.Student">
+        <property name="birth" ref="dateBean"/>
+    </bean>
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring6-ioc-annotation-demo09" />
+        <module name="spring6-gof-proxy-pattern-demo11" />
+        <module name="spring6-jbdc-demo10" />
+        <module name="spring6-factory-pattern-dao-demo04" />
+        <module name="spring6-ReflectionPractice-Demo08" />
+        <module name="spring6-mybatis3.5-demo15" />
+        <module name="spring6-Circular-Dependency-Demo07" />
+        <module name="spring6-tx-bank-demo13" />
+        <module name="spring6-junit5-demo14" />
+        <module name="spring6-bean-lifecycle-demo06" />
+        <module name="spring6-ioc-oa-demo01" />
+        <module name="myspring-test" />
+        <module name="spring6-first-demo02" />
+        <module name="spring6-aop-demo12" />
+        <module name="myspring" />
+        <module name="spring6-bean-instantiation-demo05" />
+        <module name="spring6-dependency-injection-demo03" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

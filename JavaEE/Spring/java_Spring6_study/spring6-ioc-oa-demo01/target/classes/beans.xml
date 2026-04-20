@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 1. 配置Dao层Bean：MySQL实现 -->
+    <bean id="userDao" class="org.cqipu.edu.dao.impl.UserDaoImplForMySQL"/>
+
+    <!-- 2. 配置Service层Bean，并注入Dao依赖 -->
+    <bean id="userService" class="org.cqipu.edu.service.impl.UserServiceImpl">
+        <!-- property：注入依赖 -->
+        <!-- name：对应UserServiceImpl中的属性名（userDao） -->
+        <!-- ref：对应要注入的Bean的id（即上面的userDao） -->
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <!-- 3. 配置Controller层Bean，并注入Service依赖 -->
+    <bean id="userController" class="org.cqipu.edu.controller.UserController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+</beans>

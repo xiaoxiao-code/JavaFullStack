@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="userDaoBean" class="org.cqipu.edu.dao.UserDao"/>-->
+
+    <bean id="userServiceBean" class="org.cqipu.edu.service.UserService">
+        <property name="userDao" ref="userDaoBean"/>
+    </bean>
+
+<!--    <bean id="orderDaoBean" class="org.cqipu.edu.dao.OrderDao"/>-->
+<!--    <bean id="orderServiceBean" class="org.cqipu.edu.service.OrderService">-->
+<!--        &lt;!&ndash;index="0"表示构造方法的第一个参数，将orderDaoBean对象传递给构造方法的第一个参数。&ndash;&gt;-->
+<!--        &lt;!&ndash;第一个参数下标是0&ndash;&gt;-->
+<!--        <constructor-arg index="0" ref="orderDaoBean"/>-->
+<!--        &lt;!&ndash;第二个参数下标是1&ndash;&gt;-->
+<!--        <constructor-arg index="1" ref="userDaoBean"/>-->
+<!--    </bean>-->
+<!--    <bean id="userDaoBean" class="org.cqipu.edu.dao.UserDao"/>-->
+
+<!--    <bean id="orderDaoBean" class="org.cqipu.edu.dao.OrderDao"/>-->
+<!--    <bean id="orderServiceBean" class="org.cqipu.edu.service.OrderService">-->
+<!--        &lt;!&ndash;这里使用了构造方法上参数的名字&ndash;&gt;-->
+<!--        <constructor-arg name="orderDao" ref="orderDaoBean"/>-->
+<!--        <constructor-arg name="userDao" ref="userDaoBean"/>-->
+<!--    </bean>-->
+<!--    <bean id="userDaoBean" class="org.cqipu.edu.dao.UserDao"/>-->
+
+
+    <bean id="orderDaoBean" class="org.cqipu.edu.dao.OrderDao"/>
+    <bean id="orderServiceBean" class="org.cqipu.edu.service.OrderService">
+        <!--顺序已经和构造方法的参数顺序不同了-->
+        <constructor-arg ref="userDaoBean"/>
+        <constructor-arg ref="orderDaoBean"/>
+    </bean>
+    <bean id="userDaoBean" class="org.cqipu.edu.dao.UserDao"/>
+
+
+</beans>
