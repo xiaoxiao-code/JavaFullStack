@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<button id="loadMsgBtn">获取消息</button>
+<div id="msg"></div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        let loadMsgBtn = document.querySelector("#loadMsgBtn");
+        let msgDiv = document.querySelector("#msg");
+        loadMsgBtn.addEventListener("click", async function (){
+            try{
+                // 发送ajax post请求
+                let response = await axios.post("msg");
+                msgDiv.textContent = response.data;
+            }catch (e) {
+                console.log(e);
+            }
+        });
+    });
+</script>
+</body>
+</html>

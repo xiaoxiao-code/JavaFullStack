@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index page</title>
+</head>
+<body>
+<h1>index page</h1>
+<a th:href="@{/user/detail}">用户详情</a><br>
+<a th:href="@{/product/detail}">商品详情</a><br>
+
+<!--测试RequestMapping的value属性-->
+<a th:href="@{/testValue1}">testValue1</a><br>
+<a th:href="@{/testValue2}">testValue2</a><br>
+
+<!--测试RequestMapping注解的value属性支持模糊匹配-->
+<a th:href="@{/xyz/testValueAnt}">测试value属性的模糊匹配</a><br>
+
+<!--测试RequestMapping注解的value属性支持占位符-->
+<a th:href="@{/testRESTful/1/zhangsan/20}">测试value属性使用占位符</a>
+
+<!--测试RequestMapping的method属性-->
+<form th:action="@{/login}" method="put">
+    用户名：<input type="text" name="username"/><br>
+    密码：<input type="password" name="password"/><br>
+    <input type="submit" value="登录">
+</form>
+
+<!--测试RequestMapping的params属性-->
+<a th:href="@{/testParams(username='admin',password='123')}">测试params属性</a>
+
+<a th:href="@{/testParams(password='123')}">测试params属性</a><br>
+
+<!--测试RequestMapping的headers属性-->
+<a th:href="@{/testHeaders}">测试headers属性</a><br>
+</body>
+</html>

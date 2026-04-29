@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--组件扫描-->
+    <context:component-scan base-package="org.cqipu.edu.controller,org.cqipu.edu.dao"/>
+
+    <!--视图解析器-->
+    <bean id="thymeleafViewResolver" class="org.thymeleaf.spring6.view.ThymeleafViewResolver">
+        <property name="characterEncoding" value="UTF-8"/>
+        <property name="order" value="1"/>
+        <property name="templateEngine">
+            <bean class="org.thymeleaf.spring6.SpringTemplateEngine">
+                <property name="templateResolver">
+                    <bean class="org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver">
+                        <property name="prefix" value="/WEB-INF/thymeleaf/"/>
+                        <property name="suffix" value=".html"/>
+                        <property name="templateMode" value="HTML"/>
+                        <property name="characterEncoding" value="UTF-8"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <!--开启注解-->
+    <mvc:annotation-driven/>
+
+    <!--静态资源处理-->
+    <!--告诉 Spring MVC 对于匹配特定 URL 模式的请求，直接从文件系统提供静态文件，而不需要经过控制器处理-->
+    <mvc:resources mapping="/static/**" location="/static/" />
+
+    <!--静态资源处理-->
+    <!--Spring MVC 会将所有未匹配到 Controller 的请求，转发给 Web 容器（Tomcat）的默认 Servlet 处理，性能较低。-->
+    <!--<mvc:default-servlet-handler/>-->
+
+    <!--视图控制器映射-->
+    <mvc:view-controller path="/" view-name="user_index"/>
+    <mvc:view-controller path="/toSave" view-name="user_add"/>
+
+</beans>

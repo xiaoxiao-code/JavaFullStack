@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!--前端控制器-->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <!--
+            1. / 是 Spring MVC 官方推荐写法。
+            2. /* 会拦截所有路径，包括 xx.jsp，jsp应该交由Web容器内置的JspServlet自动处理，Spring MVC不应该拦截。因此不建议写 /*
+            3. / 到底拦截的是什么？拦截的是所有其他Servlet不要的请求，不过在spring mvc开发中我们只编写一个 DispatcherServlet，不需要
+            编写其他的Servlet，在这种情况下，我们可以等同的认为 / 拦截了除jsp之外的所有请求。
+            4. / 会拦截所有的静态资源。看似是一个缺点。实则是优点。
+            5. / 的优点有三个：
+                第一：支持 RESTful URL
+                第二：放行 JSP 给容器
+                第三：促使使用更优的静态资源方案（web容器自带Servlet处理静态资源效率低。Spring框架处理静态资源效率高：例如spring提供了缓存控制等高级功能）
+        -->
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+</web-app>

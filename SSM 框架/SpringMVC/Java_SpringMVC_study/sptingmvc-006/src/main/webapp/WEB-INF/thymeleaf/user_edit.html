@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+    <link rel="stylesheet" th:href="@{/static/user.css}" type="text/css"></link>
+</head>
+<body>
+<h1>修改用户</h1>
+<form th:action="@{/user}" method="post"  th:object="${user}">
+    <!--隐藏域的方式设置请求方式为put请求-->
+    <input type="hidden" name="_method" value="put">
+    <!--隐藏域的方式提交id-->
+    <input type="hidden" name="id" th:value="*{id}">
+
+    <label>用户名:</label>
+    <input type="text" name="name" th:value="*{name}" required>
+
+    <label>性别:</label>
+    <select name="gender" th:field="*{gender}" required>
+        <option value="">-- 请选择 --</option>
+        <option value="1">男</option>
+        <option value="0">女</option>
+    </select>
+
+    <label>邮箱:</label>
+    <input type="email" name="email" th:value="*{email}" required>
+
+    <button type="submit">修改</button>
+</form>
+</body>
+</html>
